@@ -26,5 +26,14 @@ on pizza_types.pizza_type_id=pizzas.pizza_type_id
 order by price DESC
 limit 1;
 
+--Identify the most common pizza size ordered.
+SELECT size from pizzas 
+group by size
+ORDER BY count(size) DESC
+limit 1;
+
+
+
+
 
 

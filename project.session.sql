@@ -18,5 +18,13 @@ FROM order_details
 JOIN pizzas
 ON order_details.pizza_id=pizzas.pizza_id;
 
+--Identify the highest-priced pizza.
+select pizzas.pizza_type_id,pizza_types.name,pizzas.price
+FROM pizza_types
+join pizzas
+on pizza_types.pizza_type_id=pizzas.pizza_type_id
+order by price DESC
+limit 1;
+
 
 
